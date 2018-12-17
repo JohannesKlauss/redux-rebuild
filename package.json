@@ -1,24 +1,34 @@
 {
-  "name": "rebuild",
-  "version": "0.1.0",
-  "description": "A helper function that keeps the redux state immutable.",
-  "main": "lib/index.js",
+  "name": "redux-rebuild",
+  "version": "0.1.2",
+  "description": "A simple wrapper function that helps to prevent mutating the previous state in a reducer.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "test"
+    "start": "tsc -w",
+    "build": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://JohannesKlauss@github.com/JohannesKlauss/rebuild.git"
+    "url": "git+https://github.com/JohannesKlauss/redux-rebuild.git"
   },
   "keywords": [
     "redux",
-    "state",
-    "immutable"
+    "store",
+    "immutability"
   ],
-  "author": "Johannes Klauß",
+  "author": "Johannes Klauss",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JohannesKlauss/rebuild/issues"
+    "url": "https://github.com/JohannesKlauss/redux-rebuild/issues"
   },
-  "homepage": "https://github.com/JohannesKlauss/rebuild#readme"
+  "homepage": "https://github.com/JohannesKlauss/redux-rebuild#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.2.2"
+  }
 }
