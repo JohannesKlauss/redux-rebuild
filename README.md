@@ -29,7 +29,7 @@ function reducer(currentState, action) {
 }
 ```
 
-If you are not a fan of callback and want to keep it straightforward you can
+If you are not a fan of callbacks and want to keep it straightforward you can
 also omit the second parameter. The `rebuild` function then will just return
 the nextState object:
 
