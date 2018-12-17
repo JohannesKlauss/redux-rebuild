@@ -1,1 +1,1 @@
-export default function rebuild<T>(prevState: T, callback: <T>(copiedState: T) => T): void;
+export default function rebuild<T>(currentState: T, callback: (newState: T) => T): T;

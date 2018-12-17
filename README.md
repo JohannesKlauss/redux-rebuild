@@ -29,6 +29,33 @@ function reducer(currentState, action) {
 }
 ```
 
+If you are not a fan of callback and want to keep it straightforward you can
+also omit the second parameter. The `rebuild` function then will just return
+the nextState object:
+
+```javascript
+import rebuild from 'redux-rebuild';
+
+// reducer function
+function reducer(currentState, action) {
+  switch(action.type) {
+    case 'RENAME_PERSON':
+      const nextState = rebuild(currentState);
+      
+      nextState[action.payload.index].person.name = action.payload.name;
+      
+      return nextState;
+  }
+}
+```
+
+## Under the hood
+
+The `rebuild` function is just a simple wrapper function for `JSON.parse(JSON.stringify())`
+which seems to be the fastest way to copy any kind of object in general.
+Since redux store object should be JSONs, there won't be any kind of parsing
+problems (i.e. functions are not allowed in a redux store).
+
 ## Motivation
 
 One main principle in redux says, that state should never be mutated. You get

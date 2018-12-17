@@ -1,3 +1,7 @@
-export default function rebuild<T>(prevState: T, callback: <T>(copiedState: T) => T): void {
-    return callback(JSON.parse(JSON.stringify(prevState)));
+export default function rebuild<T>(currentState: T, callback?: (newState: T) => T): T {
+    if(callback) {
+        return callback(JSON.parse(JSON.stringify(currentState)));
+    }
+
+    return JSON.parse(JSON.stringify(currentState));
 }

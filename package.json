@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "start": "tsc -w",
     "build": "tsc",
     "test": "jest"
   },
@@ -27,6 +28,7 @@
     "@types/jest": "^23.3.10",
     "jest": "^23.6.0",
     "rimraf": "^2.6.2",
+    "tslib": "^1.9.3",
     "typescript": "^3.2.2"
   }
 }

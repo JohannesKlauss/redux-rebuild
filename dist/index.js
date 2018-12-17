@@ -1,4 +1,4 @@
-export default function rebuild(prevState, callback) {
-    return callback(JSON.parse(JSON.stringify(prevState)));
+export default function rebuild(currentState, callback) {
+    return callback(JSON.parse(JSON.stringify(currentState)));
 }
 //# sourceMappingURL=index.js.map
