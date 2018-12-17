@@ -1,6 +1,6 @@
 {
   "name": "redux-rebuild",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple wrapper function that helps to prevent mutating the previous state in a reducer.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
