@@ -5,6 +5,8 @@ redux-rebuild helps you keeping your redux state immutable.
 ## Installation
 
 `npm install redux-rebuild`
+or
+`yarn add redux-rebuild`
 
 ## Usage
 
